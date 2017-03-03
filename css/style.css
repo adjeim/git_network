@@ -1,0 +1,16 @@
+.form-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+}
+
+.network {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
