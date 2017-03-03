@@ -53,8 +53,8 @@ function getUser(username, userCallback) {
         } else if (userRequest.status === 404) {
             results.innerHTML = '<p>The user does not exist.</p>';
 
-        };
-    }
+        }
+    };
 
     userRequest.open('GET', usersApi);
     userRequest.send();
@@ -89,7 +89,7 @@ function getNetwork(user, networkCallback) {
                         label: following[i].login,
                         shape: 'circularImage',
                         image: following[i].avatar_url
-                    }
+                    };
                     // console.log(user);
                     userNetwork.push(user);
                 }
@@ -100,8 +100,8 @@ function getNetwork(user, networkCallback) {
             networkCallback.apply(this, [user, userNetwork]);
 
 
-        };
-    }
+        }
+    };
     followingRequest.open('GET', followingApi);
     followingRequest.send();
     
@@ -110,7 +110,7 @@ function getNetwork(user, networkCallback) {
 
 function makeDisplay(user, network) {
 
-    console.log("Network:", network)
+    console.log("Network:", network);
 
     const nodes = new vis.DataSet(network);
 
