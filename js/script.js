@@ -74,14 +74,15 @@ function getNetwork(user, networkCallback) {
             const following = JSON.parse(followingRequest.responseText);
             console.log(following);
 
-            if (following.length > 0) {
-                userNetwork.unshift({
-                    id: 1,
-                    label: user.login,
-                    shape: 'circularImage',
-                    image: user.avatar_url
-                })
+        
+            userNetwork.unshift({
+                id: 1,
+                label: user.login,
+                shape: 'circularImage',
+                image: user.avatar_url
+            })
 
+            if (following.length > 1) {
                 for (let i = 1; i < 6; i++) {
                     let user = {
                         id: (i + 1),
